@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- JS File -->
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- JQuery File -->
+    <script src="jquery.passwordstrength.js"></script>
 
 </head>
-<body>
+<body> 
 
     <!-- Form Created -->
     <form>
@@ -23,16 +26,23 @@
         </div>
         <!-- Input -2 -->
         <div class="input-box">
-            <span><i class="fa fa-envelope"></i></span><input type="text" placeholder="Email Id" required>
+            <span><i class="fa fa-envelope"></i></span><input type="email" placeholder="Email Id" required>
         </div>
         <!-- Input -3 -->
         <div class="input-box">
-            <span><i class="fa fa-key"></i></span><input type="text" placeholder="Password" required>
+            <span><i class="fa fa-key"></i></span>
+            <input type="password" id="password" placeholder="Password" required>
         </div>
 
         <!-- Button Created -->
         <button type="submit"><i class="fa fa-sign-in"></i>Register</button>
 
     </form>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#password").passwordStrength();
+        });
+    </script>
 </body>
 </html>
